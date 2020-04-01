@@ -14,7 +14,7 @@ const USERSCHEMA = new MONGOOSE.Schema({
     type: String,
     required: true
   },
-  gravatar: {
+  avatar: {
     type: String
   },
   date: {
