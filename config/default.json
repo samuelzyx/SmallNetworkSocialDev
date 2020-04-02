@@ -1,4 +1,6 @@
 {
   "mongoURL": "mongodb+srv://sam123:sam123@smallnetworksocialdev-qggiy.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "mysecrettoken"
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "3bcc14c0099cd3c3b91e",
+  "githubClientSecret": "ee140763341a4f0bd350174789c7c91c14e453d7"
 }
