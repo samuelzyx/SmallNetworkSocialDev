@@ -1,0 +1,653 @@
+{
+	"info": {
+		"_postman_id": "89b0cda0-f591-4bb6-b020-705d70acb760",
+		"name": "SmallSocialNetworkDev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Ivan Legaria\",\n\t\"email\": \"zyxsamys@hotmail.com\",\n\t\"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Auth User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NGU4YWIyOGRkZDYzN2I4NmQzOGM1In0sImlhdCI6MTU4NTc2ODYxOSwiZXhwIjoxNTg1NzcyMjE5fQ.7ItXF5mZVAa-TVWbLvV1fsh0JwjlvG0pWXJTDjqDAkE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\"\t: \"zyxsamys@gmail.com\",\n\t\"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get logged users profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NGU4YWIyOGRkZDYzN2I4NmQzOGM1In0sImlhdCI6MTU4NTg1MjU2OSwiZXhwIjoxNTg1ODU2MTY5fQ.LurfmRRPmWfgLHf33Ip0ewMRUA876L004OcPKRhUp-A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NjQwZThlOTBhMjQ2NzhjMDIxYzI0In0sImlhdCI6MTU4NTg1Njc0NCwiZXhwIjoxNTg1ODYwMzQ0fQ.1JErvwWDTsOFKdeME-1nHbzEPFL2taZDQ-EbFjs2AhA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"company\": \"TCS\",\n\t\"status\":\"Sr Full Stack Dev\",\n\t\"website\": \"https://www.samuelzyx.com\",\n\t\"skills\":\"HTML, CSS,PHP,MERN\",\n\t\"location\": \"Zapopan,Jal\",\n\t\"bio\": \"I am a Full Stack Dev, with more than 8 years of experience.\",\n\t\"githubusername\": \"samuelzyx\",\n\t\"twitter\":\"https://www.twitter.com/samuelzyx\",\n\t\"facebook\":\"https://www.facebook.com/samuelzyx\",\n\t\"youtube\":\"https://www.youtube.com/samuelzyx\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all profiles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get profile by user id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user and profile",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NjQwZThlOTBhMjQ2NzhjMDIxYzI0In0sImlhdCI6MTU4NTg1Njc0NCwiZXhwIjoxNTg1ODYwMzQ0fQ.1JErvwWDTsOFKdeME-1nHbzEPFL2taZDQ-EbFjs2AhA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add experience profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NGU4YWIyOGRkZDYzN2I4NmQzOGM1In0sImlhdCI6MTU4NTg2NTYxNCwiZXhwIjoxNTg1ODY5MjE0fQ.6mME_ioBUDqzxkqoP0EHWvG7--l_5NVi7WFzw5yWkI0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Sr Dev. Web Android\",\n\t\"company\": \"Tequilasoft. (tequilasoft.com)\",\n\t\"location\": \"Guadalajar, Jal\",\n\t\"from\": \"1-12-2012\",\n\t\"current\" : true,\n\t\"description\" :\"Back end developer Front end of web platforms and mobile applications\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/experience",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"experience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete experience",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NGU4YWIyOGRkZDYzN2I4NmQzOGM1In0sImlhdCI6MTU4NTg2MTkyNywiZXhwIjoxNTg1ODY1NTI3fQ.vhZrLKdRxDwCWwzJAs_LOP0OQ0ZfFQ56-AVhQ0NK3BQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/experience/5e8658119dc9c8283435bf82",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"experience",
+						"5e8658119dc9c8283435bf82"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add education profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NGU4YWIyOGRkZDYzN2I4NmQzOGM1In0sImlhdCI6MTU4NTg2NTYxNCwiZXhwIjoxNTg1ODY5MjE0fQ.6mME_ioBUDqzxkqoP0EHWvG7--l_5NVi7WFzw5yWkI0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"school\":\"Technological Institute of Guzman City\",\n\t\"degree\": \"Licenciature\",\n\t\"fieldofstudy\": \"Computer Systems engineer\",\n\t\"from\": \"1-8-2008\",\n\t\"to\": \"1-12-2012\",\n\t\"description\" :\"Analyze, develop and program mathematical, statistical and simulation models\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/education",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"education"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete education",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NGU4YWIyOGRkZDYzN2I4NmQzOGM1In0sImlhdCI6MTU4NTg2MTkyNywiZXhwIjoxNTg1ODY1NTI3fQ.vhZrLKdRxDwCWwzJAs_LOP0OQ0ZfFQ56-AVhQ0NK3BQ"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/education/5e865aa03fe6c821ac57d45e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"education",
+						"5e865aa03fe6c821ac57d45e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get github repos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/github/samuelzyx",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"github",
+						"samuelzyx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NGU4YWIyOGRkZDYzN2I4NmQzOGM1In0sImlhdCI6MTU4NTk1NzA0OCwiZXhwIjoxNTg1OTYwNjQ4fQ.i8F6RcK0_Zpza6KEZvjYoxfwDwaQo2-HIqgW_RpUWcA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NGU4YWIyOGRkZDYzN2I4NmQzOGM1In0sImlhdCI6MTU4NTk1NzA0OCwiZXhwIjoxNTg1OTYwNjQ4fQ.i8F6RcK0_Zpza6KEZvjYoxfwDwaQo2-HIqgW_RpUWcA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get post by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NGU4YWIyOGRkZDYzN2I4NmQzOGM1In0sImlhdCI6MTU4NTk1NzA0OCwiZXhwIjoxNTg1OTYwNjQ4fQ.i8F6RcK0_Zpza6KEZvjYoxfwDwaQo2-HIqgW_RpUWcA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/posts/5e87b91ca58b8904404c49ae",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						"5e87b91ca58b8904404c49ae"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete post by id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NGU4YWIyOGRkZDYzN2I4NmQzOGM1In0sImlhdCI6MTU4NTk1NzA0OCwiZXhwIjoxNTg1OTYwNjQ4fQ.i8F6RcK0_Zpza6KEZvjYoxfwDwaQo2-HIqgW_RpUWcA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/posts/5e87cb415eb9ba3c6c21c8e0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						"5e87cb415eb9ba3c6c21c8e0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like post by id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NGU4YWIyOGRkZDYzN2I4NmQzOGM1In0sImlhdCI6MTU4NTk1NzA0OCwiZXhwIjoxNTg1OTYwNjQ4fQ.i8F6RcK0_Zpza6KEZvjYoxfwDwaQo2-HIqgW_RpUWcA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/posts/likes/5e87cc8277971f5d881d306e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						"likes",
+						"5e87cc8277971f5d881d306e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unlike post by id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NGU4YWIyOGRkZDYzN2I4NmQzOGM1In0sImlhdCI6MTU4NTk1NzA0OCwiZXhwIjoxNTg1OTYwNjQ4fQ.i8F6RcK0_Zpza6KEZvjYoxfwDwaQo2-HIqgW_RpUWcA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/posts/unlike/5e87cc8277971f5d881d306e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						"unlike",
+						"5e87cc8277971f5d881d306e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment post by  id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NGU4YWIyOGRkZDYzN2I4NmQzOGM1In0sImlhdCI6MTU4NTk1NzA0OCwiZXhwIjoxNTg1OTYwNjQ4fQ.i8F6RcK0_Zpza6KEZvjYoxfwDwaQo2-HIqgW_RpUWcA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\": \"Lorem Ipsum has been the industry's standard dummy text ever since the 1500\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/posts/comments/5e87cc8277971f5d881d306e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						"comments",
+						"5e87cc8277971f5d881d306e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete comment from post",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWU4NGU4YWIyOGRkZDYzN2I4NmQzOGM1In0sImlhdCI6MTU4NTk1NzA0OCwiZXhwIjoxNTg1OTYwNjQ4fQ.i8F6RcK0_Zpza6KEZvjYoxfwDwaQo2-HIqgW_RpUWcA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/posts/comments/5e87cc8277971f5d881d30e/5e87d071d167b23854bf95b5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						"comments",
+						"5e87cc8277971f5d881d30e",
+						"5e87d071d167b23854bf95b5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
